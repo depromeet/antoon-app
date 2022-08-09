@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {WebView} from 'react-native-webview';
 import type {Node} from 'react';
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 
 const WebviewContainer = ({handleSetRef, handleEndLoading}) => {
   const os = Platform.OS;
@@ -25,8 +25,11 @@ const WebviewContainer = ({handleSetRef, handleEndLoading}) => {
         ref={handleSetRef}
         source={{uri}}
         // source={{uri: devUri}}
-        scalesPageToFit={true}
-        style={{marginTop}}
+        style={{
+          marginTop,
+          width: Dimensions.get('window').width,
+          height: Dimensions.get('window').height,
+        }}
       />
     </>
   );
