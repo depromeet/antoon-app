@@ -29,6 +29,9 @@ build/
 local.properties
 *.iml
 *.hprof
+keystore.properties
+output.zip
+pepk.jar
 
 # node.js
 #
