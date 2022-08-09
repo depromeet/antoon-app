@@ -1,7 +1,8 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {WebView} from 'react-native-webview';
 import type {Node} from 'react';
 import {Platform, Dimensions} from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
 const WebviewContainer = ({handleSetRef, handleEndLoading}) => {
   const os = Platform.OS;
@@ -9,6 +10,10 @@ const WebviewContainer = ({handleSetRef, handleEndLoading}) => {
   const isAndroid = os === 'android';
 
   const uri = 'https://antoon.fun';
+
+  /**
+   * @note use for development
+   */
   const devUri = isAndroid ? 'http://10.0.2.2:3000' : 'http://localhost:3000/';
 
   const handleOnMessage = ({nativeEvent: {data}}) => {
@@ -17,6 +22,16 @@ const WebviewContainer = ({handleSetRef, handleEndLoading}) => {
 
   const marginTop = isAndroid ? 0 : 25;
 
+  const SPLASH_DELAY = 300;
+
+  useEffect(() => {
+    const splashTimeoutId = setTimeout(() => {
+      SplashScreen.hide();
+    }, SPLASH_DELAY);
+
+    return () => clearTimeout(splashTimeoutId);
+  }, []);
+
   return (
     <>
       <WebView
@@ -24,6 +39,9 @@ const WebviewContainer = ({handleSetRef, handleEndLoading}) => {
         onMessage={handleOnMessage}
         ref={handleSetRef}
         source={{uri}}
+        /**
+         * @note use for development
+         */
         // source={{uri: devUri}}
         style={{
           marginTop,
