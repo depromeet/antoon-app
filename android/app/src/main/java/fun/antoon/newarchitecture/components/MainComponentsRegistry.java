@@ -1,4 +1,4 @@
-package com.antoon_app.newarchitecture.components;
+package fun.antoon.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

@@ -1,4 +1,4 @@
-package com.antoon_app;
+package fun.antoon;
 
 import android.os.Bundle;
 
