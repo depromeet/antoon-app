@@ -29,9 +29,9 @@ build/
 local.properties
 *.iml
 *.hprof
-keystore.properties
-output.zip
-pepk.jar
+android/keystore.properties
+android/app/output.zip
+android/app/pepk.jar
 
 # node.js
 #

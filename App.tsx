@@ -32,9 +32,13 @@ const WebviewContainer = ({handleSetRef, handleEndLoading}) => {
     return () => clearTimeout(splashTimeoutId);
   }, []);
 
+  const customUserAgent =
+    'Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.97 Mobile Safari/537.36';
+
   return (
     <>
       <WebView
+        userAgent={customUserAgent}
         onLoadEnd={handleEndLoading}
         onMessage={handleOnMessage}
         ref={handleSetRef}

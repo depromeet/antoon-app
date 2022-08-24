@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '11.0'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'antoon_app' do
+target 'antoon' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -20,8 +20,6 @@ target 'antoon_app' do
   )
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
-
-  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
   target 'antoon_appTests' do
     inherit! :complete
