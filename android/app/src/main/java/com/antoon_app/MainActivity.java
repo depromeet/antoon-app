@@ -1,4 +1,4 @@
-package fun.antoon;
+package com.antoon_app;
 
 import android.os.Bundle;
 
@@ -22,7 +22,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "antoon_app";
+    return "antoon";
   }
 
   /**
