@@ -1,4 +1,4 @@
-package com.antoon_app.newarchitecture;
+package fun.antoon.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.antoon_app.BuildConfig;
-import com.antoon_app.newarchitecture.components.MainComponentsRegistry;
-import com.antoon_app.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import fun.antoon.BuildConfig;
+import fun.antoon.newarchitecture.components.MainComponentsRegistry;
+import fun.antoon.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
